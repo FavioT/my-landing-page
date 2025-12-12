@@ -1,0 +1,37 @@
+// ==========================================================================
+// Component: Features (BEM)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.features {
+  // Element: grid
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// ==========================================================================
+// Component: Feature Card (BEM)
+// ==========================================================================
+
+.feature {
+  @include card;
+  padding: 1rem;
+
+  // Element: title
+  &__title {
+    margin: 0 0 0.5rem;
+  }
+
+  // Element: description
+  &__description {
+    margin: 0;
+    color: $color-muted;
+  }
+}

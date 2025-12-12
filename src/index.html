@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Landing Example — Tu Producto</title>
+  <meta name="description" content="Landing page responsive de ejemplo para presentar un producto o servicio.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__row">
+      <a class="header__brand" href="#" aria-label="Ir al inicio">TuMarca</a>
+
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#features">Características</a></li>
+          <li><a class="nav__link" href="#how">Cómo funciona</a></li>
+          <li><a class="nav__link" href="#pricing">Planes</a></li>
+          <li><a class="nav__link" href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#pricing">Empieza</a>
+        <button class="menu-toggle" id="menuToggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú">
+          <span class="menu-toggle__icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title">Solución sencilla para resolver X problema</h1>
+          <p class="hero__lead">Una descripción clara y breve de lo que ofreces. Beneficio principal en una frase atractiva.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#contact">Prueba gratis</a>
+            <a class="btn btn--outline" href="#how">Ver cómo funciona</a>
+          </div>
+
+          <ul class="hero__trust-list" aria-hidden="true">
+            <li>🔒 Seguridad</li>
+            <li>⚡ Fácil de usar</li>
+            <li>📞 Soporte 24/7</li>
+          </ul>
+        </div>
+
+        <div class="hero__media" role="img" aria-label="Vista del producto">
+          <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&q=60&auto=format&fit=crop" alt="Producto ejemplo" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section__title">Características destacadas</h2>
+        <p class="section__subtitle">Lo que hace único a tu producto</p>
+
+        <div class="features__grid">
+          <article class="feature">
+            <h3 class="feature__title">Fácil integración</h3>
+            <p class="feature__description">Conecta en minutos con herramientas que ya usas.</p>
+          </article>
+
+          <article class="feature">
+            <h3 class="feature__title">Automatizaciones</h3>
+            <p class="feature__description">Ahorra tiempo con flujos automáticos y reglas inteligentes.</p>
+          </article>
+
+          <article class="feature">
+            <h3 class="feature__title">Seguridad y privacidad</h3>
+            <p class="feature__description">Datos cifrados y control total sobre tu información.</p>
+          </article>
+
+          <article class="feature">
+            <h3 class="feature__title">Escalable</h3>
+            <p class="feature__description">Crece contigo: desde pruebas hasta empresas grandes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Cómo funciona</h2>
+        <div class="how__grid">
+          <div class="step">
+            <div class="step__number">1</div>
+            <div class="step__content">
+              <h4 class="step__title">Regístrate</h4>
+              <p class="step__description">Crea una cuenta en menos de 1 minuto.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__number">2</div>
+            <div class="step__content">
+              <h4 class="step__title">Configura</h4>
+              <p class="step__description">Personaliza según tus necesidades con pocos clics.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__number">3</div>
+            <div class="step__content">
+              <h4 class="step__title">Disfruta</h4>
+              <p class="step__description">Empieza a ver resultados y automatizar tareas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section__title">Planes</h2>
+        <p class="section__subtitle">Elige el que mejor se adapte a ti</p>
+
+        <div class="pricing__grid">
+          <article class="plan">
+            <header class="plan__header">
+              <h3 class="plan__name">Gratis</h3>
+              <p class="plan__price">€0 <span class="plan__period">/mes</span></p>
+            </header>
+            <ul class="plan__features">
+              <li>Limitado a 1 proyecto</li>
+              <li>100 tareas</li>
+              <li>Email soporte</li>
+            </ul>
+            <a class="btn btn--outline" href="#contact">Comenzar</a>
+          </article>
+
+          <article class="plan plan--recommended">
+            <header class="plan__header">
+              <span class="plan__badge">Recomendado</span>
+              <h3 class="plan__name">Pro</h3>
+              <p class="plan__price">€29 <span class="plan__period">/mes</span></p>
+            </header>
+            <ul class="plan__features">
+              <li>Proyectos ilimitados</li>
+              <li>Tareas ilimitadas</li>
+              <li>Soporte prioritario</li>
+            </ul>
+            <a class="btn btn--primary" href="#contact">Probar gratis</a>
+          </article>
+
+          <article class="plan">
+            <header class="plan__header">
+              <h3 class="plan__name">Empresa</h3>
+              <p class="plan__price">Desde €99 <span class="plan__period">/mes</span></p>
+            </header>
+            <ul class="plan__features">
+              <li>Onboarding personalizado</li>
+              <li>SLAs y soporte dedicado</li>
+              <li>Integraciones avanzadas</li>
+            </ul>
+            <a class="btn btn--outline" href="#contact">Contactar ventas</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<!-- TESTIMONIALS -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Testimonios</h2>
+        <div class="testimonials__grid">
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">"Nos ayudó a automatizar procesos y ahorrar tiempo."</p>
+            <cite class="testimonial__author">— Ana, CEO de Empresa X</cite>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">"La implementación fue instantánea y el soporte es excelente."</p>
+            <cite class="testimonial__author">— Juan, CTO de Startup Y</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / LEAD FORM -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__info">
+            <h2 class="contact__title">¿Listo para comenzar?</h2>
+            <p class="contact__description">Déjanos tus datos y nos pondremos en contacto para una demo.</p>
+
+            <ul class="contact__list">
+              <li>📞 +34 600 000 000</li>
+              <li>✉️ hola@tumarca.com</li>
+              <li>📍 Ciudad, País</li>
+            </ul>
+          </div>
+
+          <form class="form" id="leadForm" novalidate>
+            <label class="form__group">
+              <span class="form__label">Nombre</span>
+              <input class="form__input" type="text" name="name" placeholder="Tu nombre" required>
+            </label>
+
+            <label class="form__group">
+              <span class="form__label">Email</span>
+              <input class="form__input" type="email" name="email" placeholder="tu@ejemplo.com" required>
+            </label>
+
+            <label class="form__group">
+              <span class="form__label">Mensaje</span>
+              <textarea class="form__textarea" name="message" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+            </label>
+
+            <button class="btn btn--primary" type="submit">Enviar</button>
+            <p class="form__note">Al enviar aceptas nuestra política de privacidad.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <div class="footer__left">
+        <strong class="footer__brand">TuMarca</strong>
+        <p class="footer__copyright">© <span id="year"></span> TuMarca — Todos los derechos reservados</p>
+      </div>
+
+      <div class="footer__right">
+        <nav aria-label="Enlaces de pie de página">
+          <a class="footer__link" href="#">Términos</a>
+          <a class="footer__link" href="#">Privacidad</a>
+          <a class="footer__link" href="#">Soporte</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('main-nav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
+        mainNav.classList.toggle('nav--open');
+      });
+
+      // Close mobile menu when a nav link is clicked (better UX on small screens)
+      const navLinks = mainNav.querySelectorAll('.nav__link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mainNav.classList.remove('nav--open');
+        });
+      });
+    }
+
+    // Simple form handler (demo)
+    document.getElementById('leadForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Recoger valores (aquí deberías enviar al backend)
+      const data = new FormData(this);
+      console.log('Lead:', Object.fromEntries(data.entries()));
+      alert('Gracias, nos contactaremos pronto.');
+      this.reset();
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

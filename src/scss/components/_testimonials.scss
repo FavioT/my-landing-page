@@ -1,0 +1,40 @@
+// ==========================================================================
+// Component: Testimonials (BEM)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.testimonials {
+  // Element: grid
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// ==========================================================================
+// Component: Testimonial Card (BEM)
+// ==========================================================================
+
+.testimonial {
+  @include card;
+  padding: 1rem;
+
+  // Element: quote text
+  &__quote {
+    margin: 0 0 0.5rem;
+    color: $color-muted;
+    font-style: italic;
+  }
+
+  // Element: author/cite
+  &__author {
+    font-style: normal;
+    font-weight: 600;
+    color: $color-text;
+  }
+}

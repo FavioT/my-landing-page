@@ -1,0 +1,25 @@
+// ==========================================================================
+// Component: Section (BEM)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.section {
+  padding: 2rem 0;
+
+  // Modifier: alternate background
+  &--alt {
+    background: linear-gradient(180deg, #fff 0, #f7fbff 100%);
+  }
+
+  // Element: title
+  &__title {
+    margin: 0 0 0.25rem;
+    font-size: 1.25rem;
+  }
+
+  // Element: subtitle
+  &__subtitle {
+    margin: 0 0 1rem;
+    color: $color-muted;
+  }
+}

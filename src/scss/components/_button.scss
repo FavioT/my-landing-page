@@ -1,0 +1,42 @@
+// ==========================================================================
+// Component: Button (BEM)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.btn {
+  @include btn-base;
+  color: #fff;
+  background: $color-primary;
+
+  // Modifier: primary
+  &--primary {
+    background: $color-primary;
+
+    &:hover {
+      background: $color-primary-dark;
+    }
+  }
+
+  // Modifier: outline
+  &--outline {
+    background: transparent;
+    color: $color-text;
+    border: 1px solid $border-medium;
+
+    &:hover {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+
+  // Modifier: ghost
+  &--ghost {
+    background: transparent;
+    color: $color-text;
+    border: 1px solid $border-subtle;
+
+    &:hover {
+      border-color: $border-medium;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+// ==========================================================================
+// Utilities — Helper Classes
+// ==========================================================================
+@use "../abstracts" as *;
+
+// Text muted
+.text-muted {
+  color: $color-muted;
+}
+
+// Animation: fade up
+.fade-up {
+  animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Screen reader only
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

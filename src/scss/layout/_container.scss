@@ -1,0 +1,14 @@
+// ==========================================================================
+// Layout — Container
+// ==========================================================================
+@use "../abstracts" as *;
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @include lg {
+    padding: 1.5rem;
+  }
+}

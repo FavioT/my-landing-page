@@ -1,0 +1,152 @@
+// ==========================================================================
+// Component: Header (BEM)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.header {
+  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur($blur);
+
+  // Element: row (container inside header)
+  &__row {
+    @include flex-between;
+    gap: $gap;
+    padding: 0.75rem 0;
+  }
+
+  // Element: brand/logo
+  &__brand {
+    font-weight: 800;
+    font-size: 1.125rem;
+    color: $color-text;
+    text-decoration: none;
+
+    @include lg {
+      font-size: 1.25rem;
+    }
+  }
+
+  // Element: actions (buttons container)
+  &__actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
+
+// ==========================================================================
+// Component: Nav (BEM)
+// ==========================================================================
+
+.nav {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $transition-normal, opacity $transition-fast;
+  opacity: 0;
+
+  @include md {
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    position: static;
+  }
+
+  // Modifier: open (mobile menu expanded)
+  &--open {
+    max-height: 420px;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 50;
+    background: $color-card;
+    padding: 0.75rem;
+    border-bottom: 1px solid $border-light;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    border-radius: 0 0 $radius $radius;
+    width: 100%;
+  }
+
+  // Element: list
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @include md {
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+
+  // Element: link
+  &__link {
+    color: $color-text;
+    text-decoration: none;
+    display: block;
+    padding: 0.6rem;
+    border-radius: $radius-xs;
+
+    @include md {
+      padding: 0.25rem 0.5rem;
+    }
+
+    &:hover {
+      background: rgba($color-primary, 0.06);
+    }
+  }
+}
+
+// ==========================================================================
+// Component: Menu Toggle (BEM)
+// ==========================================================================
+
+.menu-toggle {
+  @include flex-center;
+  width: 44px;
+  height: 44px;
+  border-radius: $radius-xs;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  @include md {
+    display: none;
+  }
+
+  // Element: hamburger icon
+  &__icon {
+    width: 20px;
+    height: 2px;
+    background: $color-text;
+    position: relative;
+    display: block;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: $color-text;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
+  }
+}

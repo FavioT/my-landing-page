@@ -1,0 +1,58 @@
+// ==========================================================================
+// Component: How It Works (BEM)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.how {
+  // Element: grid
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// ==========================================================================
+// Component: Step Card (BEM)
+// ==========================================================================
+
+.step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem;
+  @include card;
+
+  // Element: number badge
+  &__number {
+    background: $color-primary;
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-sm;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  // Element: content wrapper
+  &__content {
+    flex: 1;
+  }
+
+  // Element: title
+  &__title {
+    margin: 0 0 0.25rem;
+  }
+
+  // Element: description
+  &__description {
+    margin: 0;
+    color: $color-muted;
+  }
+}

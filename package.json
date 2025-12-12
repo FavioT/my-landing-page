@@ -1,0 +1,26 @@
+{
+  "name": "my-landing-page",
+  "version": "1.0.0",
+  "description": "A simple landing page project",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "sass src/scss/main.scss src/css/styles.css --style=compressed",
+    "sass": "sass src/scss/main.scss src/css/styles.css",
+    "sass:watch": "sass src/scss/main.scss src/css/styles.css --watch"
+  },
+  "keywords": [
+    "landing",
+    "page",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Versado WEB",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "prettier": "^3.7.4",
+    "sass": "^1.96.0"
+  }
+}

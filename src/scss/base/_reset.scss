@@ -1,0 +1,31 @@
+// ==========================================================================
+// Base — Reset & Global Styles
+// ==========================================================================
+@use "../abstracts" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  background: $color-bg;
+  color: $color-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: $line-height-base;
+  font-size: $font-size-base;
+}
+
+// Focus visible for accessibility
+:focus-visible {
+  outline: 3px solid rgba($color-primary, 0.18);
+  outline-offset: 3px;
+  border-radius: $radius-xs;
+}

@@ -1,0 +1,51 @@
+// ==========================================================================
+// Component: Footer (BEM)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.footer {
+  padding: 1.5rem 0;
+  background: $color-footer-bg;
+  color: #fff;
+
+  // Element: row (container)
+  &__row {
+    @include flex-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  // Element: left section
+  &__left {
+    // Contains brand and copyright
+  }
+
+  // Element: brand
+  &__brand {
+    font-weight: 700;
+    display: block;
+  }
+
+  // Element: copyright
+  &__copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0;
+  }
+
+  // Element: right section (nav links)
+  &__right {
+    display: flex;
+    gap: 1rem;
+  }
+
+  // Element: link
+  &__link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

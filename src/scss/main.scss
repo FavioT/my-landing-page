@@ -1,0 +1,29 @@
+// ==========================================================================
+// Main SCSS Entry Point
+// Landing Page — Responsive (Mobile-First) with BEM
+// ==========================================================================
+
+// 1. Abstracts (forwarded for use in other files)
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+// 2. Base styles
+@use "base/reset";
+
+// 3. Layout
+@use "layout/container";
+
+// 4. Components (BEM)
+@use "components/header";
+@use "components/button";
+@use "components/hero";
+@use "components/section";
+@use "components/features";
+@use "components/how";
+@use "components/pricing";
+@use "components/testimonials";
+@use "components/contact";
+@use "components/footer";
+
+// 5. Utilities
+@use "utilities/utilities";

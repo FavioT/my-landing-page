@@ -1,0 +1,53 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+@use "variables" as *;
+
+// Media query helpers
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// Flexbox shortcuts
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Card style
+@mixin card {
+  background: $color-card;
+  border-radius: $radius-sm;
+  border: 1px solid $border-light;
+  box-shadow: $shadow-sm;
+}
+
+// Button base
+@mixin btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: $radius-sm;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background $transition-fast, border-color $transition-fast;
+}

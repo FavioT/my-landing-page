@@ -1,0 +1,44 @@
+// ==========================================================================
+// Variables — Design Tokens
+// ==========================================================================
+
+// Colors
+$color-bg: #fbfdff;
+$color-card: #ffffff;
+$color-text: #0f172a;
+$color-muted: #6b7280;
+$color-primary: #0b67f0;
+$color-primary-dark: #095bd6;
+$color-footer-bg: #0f1724;
+
+// Layout
+$max-width: 1100px;
+$gap: 1rem;
+
+// Borders & Shadows
+$radius: 12px;
+$radius-sm: 10px;
+$radius-xs: 8px;
+$shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.06);
+$shadow-primary: 0 12px 30px rgba(11, 103, 240, 0.08);
+$blur: 8px;
+
+// Border colors (rgba)
+$border-light: rgba(15, 23, 42, 0.03);
+$border-medium: rgba(15, 23, 42, 0.06);
+$border-subtle: rgba(15, 23, 42, 0.04);
+$border-primary: rgba(11, 103, 240, 0.12);
+
+// Typography
+$font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.45;
+
+// Breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1100px;
+
+// Transitions
+$transition-fast: 0.18s ease;
+$transition-normal: 0.28s ease;

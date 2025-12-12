@@ -1,0 +1,74 @@
+// ==========================================================================
+// Component: Hero (BEM)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.hero {
+  padding: 2.25rem 0;
+
+  // Element: grid layout
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: center;
+
+    @include md {
+      grid-template-columns: 1fr 520px;
+      gap: 2rem;
+    }
+
+    @include lg {
+      grid-template-columns: 1fr 560px;
+    }
+  }
+
+  // Element: content area
+  &__content {
+    // No specific styles needed, just a wrapper
+  }
+
+  // Element: title
+  &__title {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    line-height: 1.05;
+
+    @include md {
+      font-size: 2rem;
+    }
+  }
+
+  // Element: lead text
+  &__lead {
+    margin: 0 0 1rem;
+    color: $color-muted;
+  }
+
+  // Element: call-to-action buttons container
+  &__ctas {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  // Element: trust badges
+  &__trust-list {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+    color: $color-muted;
+  }
+
+  // Element: media/image container
+  &__media {
+    img {
+      width: 100%;
+      border-radius: $radius;
+      box-shadow: $shadow-sm;
+      display: block;
+    }
+  }
+}
