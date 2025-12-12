@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Landing Example — Tu Producto</title>
   <meta name="description" content="Landing page responsive de ejemplo para presentar un producto o servicio.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="header">
     <div class="container header__row">
-      <a class="header__brand" href="#" aria-label="Ir al inicio">TuMarca</a>
+      <a class="header__brand" href="#" aria-label="Ir al inicio">
+        <img src="/images/logo-light.webp" alt="Logo" title="Logo" class="logo-light" width="150" height="50">
+      </a>
 
       <nav class="nav" id="main-nav" aria-label="Navegación principal">
         <ul class="nav__list">
@@ -30,9 +33,48 @@
     </div>
   </header>
 
+  <nav class="mobile-nav" aria-label="primary">
+    <ul class="mobile-nav__list">
+      <li>
+        <a class="nav-link" aria-current="true" href="#features">
+          <span class="mobile-nav__list-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">home</span>
+          </span>
+          <span class="mobile-nav__list-label">Características</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" aria-current="false" href="#how">
+          <span class="mobile-nav__list-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>
+          </span>
+          <span class="mobile-nav__list-label">Cómo funciona</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" aria-current="false" href="#pricing">
+          <span class="mobile-nav__list-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">local_activity</span>
+          </span>
+          <span class="mobile-nav__list-label">Planes</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" aria-current="false" href="#contact">
+          <span class="mobile-nav__list-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">local_activity</span>
+          </span>
+          <span class="mobile-nav__list-label">Contacto</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
   <main>
     <!-- HERO -->
     <section class="hero">
+      <div class="hero__superior-image" style="background-image: url(/images/superior-banner-image.webp);"></div>
+
       <div class="container hero__grid">
         <div class="hero__content">
           <h1 class="hero__title">Solución sencilla para resolver X problema</h1>

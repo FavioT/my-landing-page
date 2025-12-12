@@ -21,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: $line-height-base;
   font-size: $font-size-base;
+  padding-block: $header-height;
 }
 
 // Focus visible for accessibility

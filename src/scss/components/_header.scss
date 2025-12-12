@@ -4,11 +4,14 @@
 @use "../abstracts" as *;
 
 .header {
-  background: transparent;
-  position: sticky;
+  background-color: $color-card;
+  position: fixed;
   top: 0;
-  z-index: 40;
-  backdrop-filter: blur($blur);
+  left: 0;
+  width: 100%;
+  align-items: center;
+  padding-inline: 16px;
+  z-index: 4;
 
   // Element: row (container inside header)
   &__row {
@@ -104,6 +107,48 @@
       background: rgba($color-primary, 0.06);
     }
   }
+}
+
+.mobile-nav {
+  background-color: $mobile-nav-bg;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 12px 16px;
+  z-index: 4;
+
+  &__list {
+    margin-block: 0;
+    padding-inline: 0;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+
+    &-icon {
+      width: 64px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      margin-inline: auto;
+      margin-block-end: 4px;
+      color: $color-text;
+    }
+
+    &-label {
+      font-size: 0.75rem;
+      color: $color-text;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none
+  }
+
 }
 
 // ==========================================================================

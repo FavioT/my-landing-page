@@ -10,10 +10,14 @@ $color-muted: #6b7280;
 $color-primary: #0b67f0;
 $color-primary-dark: #095bd6;
 $color-footer-bg: #0f1724;
+$mobile-nav-bg: #ebebeb;
+
 
 // Layout
 $max-width: 1100px;
 $gap: 1rem;
+$header-height: 30px;
+$header-height-mobile: 0px;
 
 // Borders & Shadows
 $radius: 12px;
