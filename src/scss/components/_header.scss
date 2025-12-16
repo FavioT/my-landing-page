@@ -118,6 +118,10 @@
   padding-block: 12px 16px;
   z-index: 4;
 
+  @include md {
+    display: none;
+  }
+
   &__list {
     margin-block: 0;
     padding-inline: 0;

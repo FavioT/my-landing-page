@@ -5,8 +5,12 @@
 
 .footer {
   padding: 1.5rem 0;
-  background: $color-footer-bg;
-  color: #fff;
+  padding-bottom: 100px; // Espacio para el mobile navbar
+  background: aliceblue;
+
+  @include md {
+    padding-bottom: 1.5rem; // Sin espacio extra en desktop
+  }
 
   // Element: row (container)
   &__row {
@@ -47,5 +51,10 @@
     &:hover {
       color: #fff;
     }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
   }
 }
