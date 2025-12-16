@@ -281,14 +281,16 @@
       <div class="container">
         <div class="contact__grid">
           <div class="contact__info">
-            <h2 class="contact__title">¿Listo para comenzar?</h2>
-            <p class="contact__description">Déjanos tus datos y nos pondremos en contacto para una demo.</p>
-
-            <ul class="contact__list">
-              <li>📞 +34 600 000 000</li>
-              <li>✉️ hola@tumarca.com</li>
-              <li>📍 Ciudad, País</li>
-            </ul>
+            <div class="contact__map-card">
+              <iframe 
+                class="contact__map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-3.7037%2C40.4168%2C-3.6837%2C40.4268&layer=mapnik&marker=40.4218%2C-3.6937"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación en el mapa">
+              </iframe>
+            </div>
           </div>
 
           <form class="form" id="leadForm" novalidate>
