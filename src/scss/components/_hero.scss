@@ -30,6 +30,14 @@
     aspect-ratio: 317 / 110;
   }
 
+  &__central-image {
+    margin-inline-start: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    aspect-ratio: 317 / 110;
+  }
+
   // Element: title
   &__title {
     margin: 0 0 0.75rem;

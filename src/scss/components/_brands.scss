@@ -1,0 +1,135 @@
+// ==========================================================================
+// Brands Carousel Component
+// ==========================================================================
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.brands {
+  background-color: $color-bg;
+  padding-block: 3rem;
+
+  &__carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  &__track-wrapper {
+    overflow: hidden;
+    flex: 0 1 auto;
+    border-radius: $radius-sm;
+  }
+
+  &__track {
+    display: flex;
+    transition: transform $transition-normal;
+    will-change: transform;
+  }
+
+  &__slide {
+    flex: 0 0 auto;
+    min-width: 120px;
+    max-width: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-right: 1.5rem;
+    background: $color-card;
+    border-radius: $radius-xs;
+    border: 1px solid $border-light;
+    box-shadow: $shadow-sm;
+    transition: transform $transition-fast, box-shadow $transition-fast;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-primary;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: filter $transition-fast, opacity $transition-fast;
+    }
+
+    &:hover img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: $color-card;
+    color: $color-text;
+    cursor: pointer;
+    box-shadow: $shadow-sm;
+    border: 1px solid $border-medium;
+    transition: background-color $transition-fast, transform $transition-fast, box-shadow $transition-fast;
+    flex-shrink: 0;
+
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: $shadow-primary;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: $color-card;
+        color: $color-text;
+        transform: none;
+        box-shadow: $shadow-sm;
+      }
+    }
+
+    .material-symbols-outlined {
+      font-size: 1.5rem;
+    }
+  }
+
+  // Mobile adjustments
+  @media (max-width: $breakpoint-md) {
+    &__carousel {
+      gap: 0.5rem;
+    }
+
+    &__arrow {
+      width: 36px;
+      height: 36px;
+
+      .material-symbols-outlined {
+        font-size: 1.25rem;
+      }
+    }
+
+    &__slide {
+      min-width: 100px;
+      padding: 0.75rem;
+    }
+  }
+}

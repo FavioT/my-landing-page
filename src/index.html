@@ -73,6 +73,8 @@
   <main>
     <!-- HERO -->
     <section class="hero">
+
+      <!-- SUPERIOR BANNER -->
       <div class="hero__superior-image" style="background-image: url(/images/superior-banner-image.webp);"></div>
 
       <div class="container hero__grid">
@@ -95,6 +97,9 @@
           <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&q=60&auto=format&fit=crop" alt="Producto ejemplo" loading="lazy">
         </div>
       </div>
+
+      <!-- CENTRAL BANNER -->
+      <div class="hero__central-image" style="background-image: url(/images/central-banner-image.webp);"></div>
     </section>
 
     <!-- FEATURES -->
@@ -123,6 +128,50 @@
             <h3 class="feature__title">Escalable</h3>
             <p class="feature__description">Crece contigo: desde pruebas hasta empresas grandes.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS CAROUSEL -->
+    <section class="section brands">
+      <div class="container">
+        <h2 class="section__title">Confían en nosotros</h2>
+        <p class="section__subtitle">Empresas líderes que ya usan nuestra solución</p>
+
+        <div class="brands__carousel">
+          <button class="brands__arrow brands__arrow--prev" aria-label="Anterior">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+
+          <div class="brands__track-wrapper">
+            <div class="brands__track">
+              <div class="brands__slide">
+                <img src="./images/Brand-01.png" alt="Marca 1" loading="lazy">
+              </div>
+              <div class="brands__slide">
+                <img src="./images/Brand-02.png" alt="Marca 2" loading="lazy">
+              </div>
+              <div class="brands__slide">
+                <img src="./images/Brand-03.png" alt="Marca 3" loading="lazy">
+              </div>
+              <div class="brands__slide">
+                <img src="./images/Brand-04.png" alt="Marca 4" loading="lazy">
+              </div>
+              <div class="brands__slide">
+                <img src="./images/Brand-05.png" alt="Marca 5" loading="lazy">
+              </div>
+              <div class="brands__slide">
+                <img src="./images/Brand-06.png" alt="Marca 6" loading="lazy">
+              </div>
+              <div class="brands__slide">
+                <img src="./images/Brand-07.png" alt="Marca 7" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <button class="brands__arrow brands__arrow--next" aria-label="Siguiente">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
         </div>
       </div>
     </section>
@@ -316,6 +365,72 @@
 
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Brands Carousel (Infinite)
+    (function() {
+      const track = document.querySelector('.brands__track');
+      const prevBtn = document.querySelector('.brands__arrow--prev');
+      const nextBtn = document.querySelector('.brands__arrow--next');
+      
+      if (!track || !prevBtn || !nextBtn) return;
+
+      const slides = track.querySelectorAll('.brands__slide');
+      let currentIndex = 0;
+      let slidesPerView = getSlidesPerView();
+      let maxIndex = Math.max(0, slides.length - slidesPerView);
+
+      function getSlidesPerView() {
+        if (window.innerWidth < 576) return 2;
+        if (window.innerWidth < 768) return 3;
+        if (window.innerWidth < 992) return 4;
+        return 5;
+      }
+
+      function getSlideWidth() {
+        const slide = slides[0];
+        if (!slide) return 0;
+        const style = window.getComputedStyle(slide);
+        const marginRight = parseFloat(style.marginRight) || 24;
+        return slide.offsetWidth + marginRight;
+      }
+
+      function updateCarousel() {
+        const offset = currentIndex * getSlideWidth();
+        track.style.transform = `translateX(-${offset}px)`;
+      }
+
+      function recalculate() {
+        slidesPerView = getSlidesPerView();
+        maxIndex = Math.max(0, slides.length - slidesPerView);
+        if (currentIndex > maxIndex) {
+          currentIndex = maxIndex;
+        }
+        updateCarousel();
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          // Volver al final (infinito)
+          currentIndex = maxIndex;
+        }
+        updateCarousel();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+        } else {
+          // Volver al inicio (infinito)
+          currentIndex = 0;
+        }
+        updateCarousel();
+      });
+
+      window.addEventListener('resize', recalculate);
+      updateCarousel();
+    })();
   </script>
 </body>
 </html>
