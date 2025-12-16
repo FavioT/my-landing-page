@@ -8,10 +8,11 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
 
     @include md {
       grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
     }
   }
 }
@@ -22,62 +23,128 @@
 
 .plan {
   @include card;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: $radius;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.1);
+  }
 
   // Modifier: recommended/highlighted
   &--recommended {
-    border: 2px solid $border-primary;
+    border: 2px solid $color-primary;
     box-shadow: $shadow-primary;
+    position: relative;
+    transform: scale(1.02);
+
+    @include md {
+      transform: scale(1.05);
+    }
+
+    &:hover {
+      transform: scale(1.02) translateY(-4px);
+
+      @include md {
+        transform: scale(1.05) translateY(-4px);
+      }
+    }
   }
 
   // Element: header
   &__header {
-    @include flex-between;
-    gap: 1rem;
-  }
-
-  // Element: name/title
-  &__name {
-    margin: 0;
-  }
-
-  // Element: price
-  &__price {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin: 0;
-  }
-
-  // Element: period (e.g., "/mes")
-  &__period {
-    font-size: 0.875rem;
-    font-weight: 400;
-    color: $color-muted;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid $border-light;
+    position: relative;
   }
 
   // Element: badge
   &__badge {
-    background: $color-primary;
+    background: linear-gradient(135deg, $color-primary, $color-primary-dark);
     color: white;
-    padding: 0.25rem 0.5rem;
+    padding: 0.35rem 1rem;
     border-radius: 999px;
     font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+
+  // Element: name/title
+  &__name {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $color-text;
+  }
+
+  // Element: price
+  &__price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: $color-text;
+    line-height: 1.2;
+  }
+
+  // Element: period (e.g., "/mes")
+  &__period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-muted;
   }
 
   // Element: features list
   &__features {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 1.5rem;
+    flex: 1;
+    text-align: left;
 
     li {
-      padding: 0.25rem 0;
-      color: $color-muted;
+      padding: 0.6rem 0;
+      color: $color-text;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 1px solid $border-light;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &::before {
+        content: "✓";
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        background: rgba($color-primary, 0.1);
+        color: $color-primary;
+        border-radius: 50%;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
     }
+  }
+
+  // Button at the bottom
+  .btn {
+    margin-top: auto;
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
   }
 }
