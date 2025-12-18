@@ -1,0 +1,84 @@
+// ==========================================================================
+// Component: Speedtest (BEM)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.speedtest {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    background: $color-card;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      text-align: left;
+      gap: 2rem;
+      padding: 2.5rem 3rem;
+    }
+  }
+
+  &__image {
+    margin: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+    border-radius: 16px;
+    padding: 1rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    @media (min-width: 768px) {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $color-text;
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    color: $color-muted;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    max-width: 480px;
+  }
+
+  .btn {
+    margin-top: 0.5rem;
+  }
+}

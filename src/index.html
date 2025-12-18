@@ -71,63 +71,106 @@
   </nav>
 
   <main>
-    <!-- HERO -->
+    <!-- SUPERIOR BANNER -->
     <section class="hero">
-
-      <!-- SUPERIOR BANNER -->
       <div class="hero__superior-image" style="background-image: url(/images/superior-banner-image.webp);"></div>
+    </section>
 
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <h1 class="hero__title">Solución sencilla para resolver X problema</h1>
-          <p class="hero__lead">Una descripción clara y breve de lo que ofreces. Beneficio principal en una frase atractiva.</p>
-          <div class="hero__ctas">
-            <a class="btn btn--primary" href="#contact">Prueba gratis</a>
-            <a class="btn btn--outline" href="#how">Ver cómo funciona</a>
-          </div>
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section__title">Planes</h2>
+        <p class="section__subtitle">Elegí la opción que mejor te funcione y contactanos para coordinar la instalación..</p>
 
-          <ul class="hero__trust-list" aria-hidden="true">
-            <li>🔒 Seguridad</li>
-            <li>⚡ Fácil de usar</li>
-            <li>📞 Soporte 24/7</li>
-          </ul>
-        </div>
+        <div class="pricing__grid">
+          <article class="plan">
+            <header class="plan__header">
+              <h3 class="plan__name">Fibra Óptica Residencial</h3>
+              <p class="plan__price">50 <span class="plan__period">Mbps</span></p>
+            </header>
+            <ul class="plan__features">
+              <li>Sujeto a disp. geográfica</li>
+              <li>Gastos administrativos incluidos</li>
+              <li>Seguro técnico incluido</li>
+              <li>Asistencia técnica adicional con costo</li>
+            </ul>
+            <a class="btn btn--outline" href="#contact">Contratar</a>
+          </article>
 
-        <div class="hero__media" role="img" aria-label="Vista del producto">
-          <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&q=60&auto=format&fit=crop" alt="Producto ejemplo" loading="lazy">
+          <article class="plan plan--recommended">
+            <header class="plan__header">
+              <span class="plan__badge">Recomendado</span>
+              <h3 class="plan__name">Fibra Óptica Residencial</h3>
+              <p class="plan__price">300 <span class="plan__period">Mbps</span></p>
+            </header>
+            <ul class="plan__features">
+              <li>Sujeto a disp. geográfica</li>
+              <li>Gastos administrativos incluidos</li>
+              <li>Seguro técnico incluido</li>
+              <li>Asistencia técnica adicional con costo</li>
+            </ul>
+            <a class="btn btn--primary" href="#contact">Contratar</a>
+          </article>
+
+          <article class="plan">
+            <header class="plan__header">
+              <h3 class="plan__name">Fibra Óptica Residencial</h3>
+              <p class="plan__price">100 <span class="plan__period">Mbps</span></p>
+            </header>
+            <ul class="plan__features">
+              <li>Sujeto a disp. geográfica</li>
+              <li>Gastos administrativos incluidos</li>
+              <li>Seguro técnico incluido</li>
+              <li>Asistencia técnica adicional con costo</li>
+            </ul>
+            <a class="btn btn--outline" href="#contact">Contratar</a>
+          </article>
         </div>
       </div>
-
-      <!-- CENTRAL BANNER -->
+    </section>
+    
+    <!-- CENTRAL BANNER -->
+    <section class="hero">
       <div class="hero__central-image" style="background-image: url(/images/central-banner-image.webp);"></div>
     </section>
 
     <!-- FEATURES -->
-    <section id="features" class="section">
+    <section id="features">
       <div class="container">
-        <h2 class="section__title">Características destacadas</h2>
-        <p class="section__subtitle">Lo que hace único a tu producto</p>
+        <h2 class="section__title">Servicio de Internet Inalámbrico</h2>
+        <p class="section__subtitle">Nos adaptamos a tus necesidades, podes conectarte a través de una antena a nuestros servicios.</p>
 
         <div class="features__grid">
           <article class="feature">
-            <h3 class="feature__title">Fácil integración</h3>
-            <p class="feature__description">Conecta en minutos con herramientas que ya usas.</p>
+            <h3 class="feature__title">📡 Conexión Directa</h3>
+            <p class="feature__description">Instalamos una antena (recibidor) en el techo o en un lugar de buen alcance en la localidad, apuntando directamente a unas de nuestras torres (Puntos de Acceso).</p>
           </article>
 
           <article class="feature">
-            <h3 class="feature__title">Automatizaciones</h3>
-            <p class="feature__description">Ahorra tiempo con flujos automáticos y reglas inteligentes.</p>
+            <h3 class="feature__title">👁️ Sin Obstáculos</h3>
+            <p class="feature__description">Para garantizar el servicio no deben existir interferencias visuales en lo que llamamos línea de vista; como árboles, montañas, edificios y elementos similares.</p>
           </article>
 
           <article class="feature">
-            <h3 class="feature__title">Seguridad y privacidad</h3>
-            <p class="feature__description">Datos cifrados y control total sobre tu información.</p>
+            <h3 class="feature__title">📶 Distribución WiFi</h3>
+            <p class="feature__description">Una vez instalada la antena en el lugar, el servicio llegará al interior de la residencia mediante un cable, que puede conectar directamente a un equipo o un Router Wi-Fi para distribuir la señal y conectar más dispositivos de forma inalámbrica.</p>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="feature">
-            <h3 class="feature__title">Escalable</h3>
-            <p class="feature__description">Crece contigo: desde pruebas hasta empresas grandes.</p>
-          </article>
+    <!-- SPEEDTEST -->
+    <section class="section section--alt speedtest">
+      <div class="container">
+        <div class="speedtest__content">
+          <figure class="speedtest__image">
+            <img src="https://chipped.com.ar/wp-content/uploads/2024/11/image-10.png" alt="Speedtest" width="197" height="197">
+          </figure>
+          <div class="speedtest__info">
+            <h3 class="speedtest__title">Validá la velocidad de tu Internet 🚀</h3>
+            <p class="speedtest__description">Validá que tu proveedor de internet te esté entregando la velocidad deseada. Siempre estaremos nosotros para ayudarte a que tengas el mejor servicio.</p>
+            <a class="btn btn--outline" href="https://www.nperf.com/?sp=10242" target="_blank" rel="noopener">Realizar prueba</a>
+          </div>
         </div>
       </div>
     </section>
@@ -176,109 +219,12 @@
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section id="how" class="section section--alt">
-      <div class="container">
-        <h2 class="section__title">Cómo funciona</h2>
-        <div class="how__grid">
-          <div class="step">
-            <div class="step__number">1</div>
-            <div class="step__content">
-              <h4 class="step__title">Regístrate</h4>
-              <p class="step__description">Crea una cuenta en menos de 1 minuto.</p>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step__number">2</div>
-            <div class="step__content">
-              <h4 class="step__title">Configura</h4>
-              <p class="step__description">Personaliza según tus necesidades con pocos clics.</p>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step__number">3</div>
-            <div class="step__content">
-              <h4 class="step__title">Disfruta</h4>
-              <p class="step__description">Empieza a ver resultados y automatizar tareas.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing" class="section">
-      <div class="container">
-        <h2 class="section__title">Planes</h2>
-        <p class="section__subtitle">Elige el que mejor se adapte a ti</p>
-
-        <div class="pricing__grid">
-          <article class="plan">
-            <header class="plan__header">
-              <h3 class="plan__name">Gratis</h3>
-              <p class="plan__price">€0 <span class="plan__period">/mes</span></p>
-            </header>
-            <ul class="plan__features">
-              <li>Limitado a 1 proyecto</li>
-              <li>100 tareas</li>
-              <li>Email soporte</li>
-            </ul>
-            <a class="btn btn--outline" href="#contact">Comenzar</a>
-          </article>
-
-          <article class="plan plan--recommended">
-            <header class="plan__header">
-              <span class="plan__badge">Recomendado</span>
-              <h3 class="plan__name">Pro</h3>
-              <p class="plan__price">€29 <span class="plan__period">/mes</span></p>
-            </header>
-            <ul class="plan__features">
-              <li>Proyectos ilimitados</li>
-              <li>Tareas ilimitadas</li>
-              <li>Soporte prioritario</li>
-            </ul>
-            <a class="btn btn--primary" href="#contact">Probar gratis</a>
-          </article>
-
-          <article class="plan">
-            <header class="plan__header">
-              <h3 class="plan__name">Empresa</h3>
-              <p class="plan__price">Desde €99 <span class="plan__period">/mes</span></p>
-            </header>
-            <ul class="plan__features">
-              <li>Onboarding personalizado</li>
-              <li>SLAs y soporte dedicado</li>
-              <li>Integraciones avanzadas</li>
-            </ul>
-            <a class="btn btn--outline" href="#contact">Contactar ventas</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-<!-- TESTIMONIALS -->
-    <section class="section section--alt">
-      <div class="container">
-        <h2 class="section__title">Testimonios</h2>
-        <div class="testimonials__grid">
-          <blockquote class="testimonial">
-            <p class="testimonial__quote">"Nos ayudó a automatizar procesos y ahorrar tiempo."</p>
-            <cite class="testimonial__author">— Ana, CEO de Empresa X</cite>
-          </blockquote>
-
-          <blockquote class="testimonial">
-            <p class="testimonial__quote">"La implementación fue instantánea y el soporte es excelente."</p>
-            <cite class="testimonial__author">— Juan, CTO de Startup Y</cite>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
     <!-- CONTACT / LEAD FORM -->
     <section id="contact" class="section">
       <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <p class="section__subtitle">¿Tenés alguna consulta? Escribinos y te responderemos a la brevedad.</p>
+
         <div class="contact__grid">
           <div class="contact__info">
             <iframe 
@@ -319,6 +265,49 @@
   </main>
 
   <footer class="footer">
+    <div class="container footer__content">
+      <div class="footer__info">
+        <h4 class="footer__title">Contacto</h4>
+        <ul class="footer__list">
+          <li>
+            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+            <span>Blvd Pellegrini 799, Roldán, Santa Fe, S2134 Argentina</span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined" aria-hidden="true">phone</span>
+            <a href="tel:+5493417806848">+54 9 341 780-6848</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+            <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__social">
+        <h4 class="footer__title">Seguinos</h4>
+        <div class="footer__social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/5491112345678" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__hours">
+        <h4 class="footer__title">Horarios</h4>
+        <ul class="footer__list">
+          <li>Lunes a Viernes: 9:00 - 18:00</li>
+          <li>Sábados: 9:00 - 13:00</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="footer__bottom">
       <a href="https://www.versadoweb.com" target="_blank">
         <img src="./images/versado-web-logo.png" alt="Versado Web">
