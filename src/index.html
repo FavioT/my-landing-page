@@ -89,61 +89,63 @@
       <div class="hero__superior-image" style="background-image: url(/images/superior-banner-image.webp);"></div>
     </section>
 
-    <!-- PRICING -->
-    <section id="pricing" class="section">
-      <div class="container">
-        <h2 class="section__title">Planes</h2>
-        <p class="section__subtitle">Elegí la opción que mejor te funcione y contactanos para coordinar la instalación..</p>
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="features-grid">
 
-        <div class="pricing__grid">
-          <article class="plan">
-            <header class="plan__header">
-              <h3 class="plan__name">Fibra Óptica Residencial</h3>
-              <p class="plan__price">50 <span class="plan__period">Mbps</span></p>
-            </header>
-            <ul class="plan__features">
-              <li>Sujeto a disp. geográfica</li>
-              <li>Gastos administrativos incluidos</li>
-              <li>Seguro técnico incluido</li>
-              <li>Asistencia técnica adicional con costo</li>
-            </ul>
-            <a class="btn btn--outline" href="#contact">Contratar</a>
-          </article>
+        <article class="feature-card">
+          <div class="icon">📷</div>
+          <h3>Instalaciones profesionales<br>para uso continuo</h3>
+          <p>
+            Sistemas preparados para operar todos los días en entornos de alta exigencia
+          </p>
+        </article>
 
-          <article class="plan plan--recommended">
-            <header class="plan__header">
-              <span class="plan__badge">Recomendado</span>
-              <h3 class="plan__name">Fibra Óptica Residencial</h3>
-              <p class="plan__price">300 <span class="plan__period">Mbps</span></p>
-            </header>
-            <ul class="plan__features">
-              <li>Sujeto a disp. geográfica</li>
-              <li>Gastos administrativos incluidos</li>
-              <li>Seguro técnico incluido</li>
-              <li>Asistencia técnica adicional con costo</li>
-            </ul>
-            <a class="btn btn--primary" href="#contact">Contratar</a>
-          </article>
+        <article class="feature-card">
+          <div class="icon">⚙️</div>
+          <h3>Implementación<br>técnica correcta desde el inicio</h3>
+          <p>
+            Planificación e instalación pensadas para asegurar estabilidad en el uso real
+          </p>
+        </article>
 
-          <article class="plan">
-            <header class="plan__header">
-              <h3 class="plan__name">Fibra Óptica Residencial</h3>
-              <p class="plan__price">100 <span class="plan__period">Mbps</span></p>
-            </header>
-            <ul class="plan__features">
-              <li>Sujeto a disp. geográfica</li>
-              <li>Gastos administrativos incluidos</li>
-              <li>Seguro técnico incluido</li>
-              <li>Asistencia técnica adicional con costo</li>
-            </ul>
-            <a class="btn btn--outline" href="#contact">Contratar</a>
-          </article>
-        </div>
+        <article class="feature-card">
+          <div class="icon">🏢</div>
+          <h3>Infraestructura<br>pensada para grandes espacios</h3>
+          <p>
+            Soluciones adaptadas a industrias, parques industriales y espacios públicos
+          </p>
+        </article>
+
+        <article class="feature-card highlight">
+          <div class="icon">🏭</div>
+          <h3>Sistema de videovigilancia urbana y corporativa probado en operación real</h3>
+          <p>
+            Más de 570 cámaras activas en proyectos urbanos y privados, actualmente en funcionamiento
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="icon">💡</div>
+          <h3>Experiencia aplicable<br>a municipios e industrias</h3>
+          <p>
+            El mismo criterio técnico utilizado en proyectos públicos y corporativos
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="icon">🛠️</div>
+          <h3>Soporte técnico<br>como parte del sistema</h3>
+          <p>
+            Respaldo técnico que acompaña el funcionamiento en el tiempo
+          </p>
+        </article>
+
       </div>
     </section>
-    
+
     <!-- VIDEO BANNER -->
-    <section class="hero">
+    <section>
       <video class="hero__central-video" autoplay muted loop playsinline>
         <source src="/images/banner-video.mp4" type="video/mp4">
         Tu navegador no soporta el elemento de video.
@@ -192,104 +194,98 @@
       </div>
     </section>
 
-    <!-- FEATURES -->
-    <!-- <section id="features">
+    <!-- CONTACT FORM / OPEN STREET MAP -->
+    <section id="contact-form" class="section--alt">
       <div class="container">
-        <h2 class="section__title">Servicio de Internet Inalámbrico</h2>
-        <p class="section__subtitle">Nos adaptamos a tus necesidades, podes conectarte a través de una antena a nuestros servicios.</p>
-
-        <div class="features__grid">
-          <article class="feature">
-            <h3 class="feature__title">📡 Conexión Directa</h3>
-            <p class="feature__description">Instalamos una antena (recibidor) en el techo o en un lugar de buen alcance en la localidad, apuntando directamente a unas de nuestras torres (Puntos de Acceso).</p>
-          </article>
-
-          <article class="feature">
-            <h3 class="feature__title">👁️ Sin Obstáculos</h3>
-            <p class="feature__description">Para garantizar el servicio no deben existir interferencias visuales en lo que llamamos línea de vista; como árboles, montañas, edificios y elementos similares.</p>
-          </article>
-
-          <article class="feature">
-            <h3 class="feature__title">📶 Distribución WiFi</h3>
-            <p class="feature__description">Una vez instalada la antena en el lugar, el servicio llegará al interior de la residencia mediante un cable, que puede conectar directamente a un equipo o un Router Wi-Fi para distribuir la señal y conectar más dispositivos de forma inalámbrica.</p>
-          </article>
-        </div>
+        <h2 class="section__title--central section__title--alt" >Contáctanos</h2>
+        <form class="contact-form" action="https://admin.chippedferretera.com.ar/api/v1/contact-us" method="post" id="contact-form">
+          <div class="input-wrapper">
+            <div class="input-group">
+              <input type="text" name="name" id="name" placeholder="Tu nombre*" class="contact-input-field" aria-label="name" required>
+              <span class="error-message" id="name-error"></span>
+            </div>
+            <div class="input-group">
+              <input type="email" name="email_address" id="email_address" placeholder="Dirección de correo*" class="contact-input-field" aria-label="email_address" required>
+              <span class="error-message" id="email_address-error"></span>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <div class="input-group">
+              <input type="text" name="subject" id="subject" placeholder="Asunto" class="contact-input-field" aria-label="subject">
+              <span class="error-message" id="subject-error"></span>
+            </div>
+            <div class="input-group">
+              <input type="tel" name="phone" id="phone" placeholder="Número de teléfono*" class="contact-input-field" aria-label="phone" required>
+              <span class="error-message" id="phone-error"></span>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <textarea name="message" id="message" placeholder="Tu mensaje...*" class="contact-input-field" aria-label="message" required></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary" id="submit-form-btn">Enviar mensaje</button>
+        </form>
       </div>
-    </section> -->
-
-    <!-- SPEEDTEST -->
-    <section id="speedtest" class="section section--alt speedtest">
       <div class="container">
-        <div class="speedtest__content">
-          <figure class="speedtest__image">
-            <img src="https://chipped.com.ar/wp-content/uploads/2024/11/image-10.png" alt="Speedtest" width="197" height="197">
-          </figure>
-          <div class="speedtest__info">
-            <h3 class="speedtest__title">Validá la velocidad de tu Internet 🚀</h3>
-            <p class="speedtest__description">Validá que tu proveedor de internet te esté entregando la velocidad deseada. Siempre estaremos nosotros para ayudarte a que tengas el mejor servicio.</p>
-            <a class="btn btn--outline" href="https://www.nperf.com/?sp=10242" target="_blank" rel="noopener">Realizar prueba</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT FORM -->
-    <section id="contact-form" class="section">
-      <form class="contact-form" action="https://admin.chippedferretera.com.ar/api/v1/contact-us" method="post" id="contact-form">
-        <p class="contact-section-text" id="form-status"></p>
-        <div class="input-wrapper">
-          <div class="input-group">
-            <input type="text" name="name" id="name" placeholder="Tu nombre*" class="contact-input-field" aria-label="name" required>
-            <span class="error-message" id="name-error"></span>
-          </div>
-          <div class="input-group">
-            <input type="email" name="email_address" id="email_address" placeholder="Dirección de correo*" class="contact-input-field" aria-label="email_address" required>
-            <span class="error-message" id="email_address-error"></span>
-          </div>
-        </div>
-        <div class="input-wrapper">
-          <div class="input-group">
-            <input type="text" name="subject" id="subject" placeholder="Asunto" class="contact-input-field" aria-label="subject">
-            <span class="error-message" id="subject-error"></span>
-          </div>
-          <div class="input-group">
-            <input type="tel" name="phone" id="phone" placeholder="Número de teléfono*" class="contact-input-field" aria-label="phone" required>
-            <span class="error-message" id="phone-error"></span>
-          </div>
-        </div>
-        <div class="input-wrapper">
-          <textarea name="message" id="message" placeholder="Tu mensaje...*" class="contact-input-field" aria-label="message" required></textarea>
-          <span class="error-message" id="message-error"></span>
-        </div>
-        <button type="submit" class="btn btn--primary" id="submit-form-btn">Enviar mensaje</button>
-      </form>
-    </section>
-
-    <!-- CONTACT / LEAD FORM -->
-    <section id="openstreet-map" class="section">
-      <div class="container">
-        <h2 class="section__title">Contacto</h2>
-        <p class="section__subtitle">¿Tenés alguna consulta? Escribinos y te responderemos a la brevedad.</p>
-
         <div class="contact__grid">
-          <div class="contact__info">
-            <iframe 
-              class="contact__map"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-60.91207623481751%2C-32.901109973439695%2C-60.904780626297004%2C-32.896641877370435&amp;layer=mapnik&amp;marker=-32.898876237933095%2C-60.90842843055725"
-              width="100%" 
-              height="100%" 
-              style="border:0; min-height: 350px; border-radius: 12px;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Ubicación en el mapa">
-            </iframe>
+          <div class="contact__cards">
+            <ul class="contact-list">
+              <li class="contact-item">
+                <div class="contact-card">
+                  <div class="card-icon">
+                    <span class="material-symbols-outlined">email</span>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Escríbenos</h3>
+                    <a class="contact-card-link" href="mailto:contacto@ejemplo.com" target="_blank">contacto@ejemplo.com</a>
+                  </div>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-card">
+                  <div class="card-icon">
+                    <span class="material-symbols-outlined">map</span>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Visítanos</h3>
+                    <a class="contact-card-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pellegrini%20799%2C%20Rold%C3%A1n" target="_blank">Pellegrini 799, Roldán</a>
+                  </div>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-card">
+                  <div class="card-icon">
+                    <span class="material-symbols-outlined">phone</span>
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">Llámanos</h3>
+                    <a class="contact-card-link" href="tel:+5493417806848" target="_blank">+54 9 341 780-6848</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
 
-          
+          <div class="contact__info">
+            <div class="location-wrapper">
+              <h3>Casa Central Roldán</h3>
+              <p class="location-address">Pellegrini 799, Roldán, Santa Fe</p>
+              <div class="map-container contact-map">
+                <iframe 
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=-60.908676250000006%2C-32.899018250000005%2C-60.90836375%2C-32.89870575&amp;layer=mapnik&amp;marker=-32.898862%2C-60.90852" 
+                  width="100%" 
+                  height="300" 
+                  loading="lazy"
+                  title="Ubicación en el mapa">
+                </iframe>
+              </div>
+              <a href="https://www.openstreetmap.org/?mlat=-32.898862&amp;mlon=-60.90852&amp;zoom=14" target="_blank" rel="noopener noreferrer" class="map-link">Ver en OpenStreetMap</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -298,7 +294,7 @@
       <div class="hero__superior-image" style="background-image: url(/images/inferior-banner-image.webp);"></div>
     </section>
 
-    <div class="footer__bottom">
+    <div class="footer__bottom section--alt">
       <a href="https://www.versadoweb.com" target="_blank">
         <img src="./images/versado-web-logo.png" alt="Versado Web">
       </a>
