@@ -34,6 +34,7 @@
 
   // Element: actions (buttons container)
   &__actions {
+    visibility: hidden;
     display: flex;
     gap: 0.5rem;
     align-items: center;

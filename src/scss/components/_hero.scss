@@ -38,6 +38,14 @@
     aspect-ratio: 317 / 110;
   }
 
+  &__central-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
   // Element: title
   &__title {
     margin: 0 0 0.75rem;

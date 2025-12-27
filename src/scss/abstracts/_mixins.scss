@@ -4,6 +4,12 @@
 @use "variables" as *;
 
 // Media query helpers
+@mixin sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
 @mixin md {
   @media (min-width: $breakpoint-md) {
     @content;
