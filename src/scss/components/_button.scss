@@ -39,4 +39,14 @@
       border-color: $border-medium;
     }
   }
+
+  &--submit {
+    width: 50%;
+    height: 50px;
+    border-radius: 0;
+
+    &:hover {
+      background: darken($color-primary, 10%);
+    }
+  }
 }

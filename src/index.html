@@ -26,14 +26,14 @@
   <header class="header">
     <div class="container header__row">
       <a class="header__brand" href="#" aria-label="Ir al inicio">
-        <img src="/images/logo-light.webp" alt="Logo" title="Logo" class="logo-light" width="150" height="50">
+        <img src="/images/logo-light.png" alt="Logo" title="Logo" class="logo-light" width="150" height="50">
       </a>
 
       <nav class="nav" id="main-nav" aria-label="Navegación principal">
         <ul class="nav__list">
-          <li><a class="nav__link" href="#pricing">Planes</a></li>
-          <li><a class="nav__link" href="#speedtest">Speedtest</a></li>
-          <li><a class="nav__link" href="#contact">Contacto</a></li>
+          <li><a class="nav__link" href="#features">Nosotros</a></li>
+          <li><a class="nav__link" href="#contact-form">Contacto</a></li>
+          <li><a class="nav__link" href="#openstreet-map">Localización</a></li>
         </ul>
       </nav>
 
@@ -49,35 +49,27 @@
   <nav class="mobile-nav" aria-label="primary">
     <ul class="mobile-nav__list">
       <li>
-        <a class="nav-link" aria-current="true" href="#pricing">
+        <a class="nav-link" aria-current="true" href="#features">
           <span class="mobile-nav__list-icon">
-            <span class="material-symbols-outlined" aria-hidden="true">home</span>
+            <span class="material-symbols-outlined" aria-hidden="true">info</span>
           </span>
-          <span class="mobile-nav__list-label">Planes</span>
+          <span class="mobile-nav__list-label">Nosotros</span>
         </a>
       </li>
       <li>
-        <a class="nav-link" aria-current="false" href="#how">
+        <a class="nav-link" aria-current="false" href="#contact-form">
           <span class="mobile-nav__list-icon">
-            <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>
-          </span>
-          <span class="mobile-nav__list-label">Cómo funciona</span>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" aria-current="false" href="#speedtest">
-          <span class="mobile-nav__list-icon">
-            <span class="material-symbols-outlined" aria-hidden="true">local_activity</span>
-          </span>
-          <span class="mobile-nav__list-label">Speedtest</span>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" aria-current="false" href="#contact">
-          <span class="mobile-nav__list-icon">
-            <span class="material-symbols-outlined" aria-hidden="true">local_activity</span>
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
           </span>
           <span class="mobile-nav__list-label">Contacto</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" aria-current="false" href="#openstreet-map">
+          <span class="mobile-nav__list-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">map_search</span>
+          </span>
+          <span class="mobile-nav__list-label">Localización</span>
         </a>
       </li>
     </ul>
@@ -90,11 +82,13 @@
     </section>
 
     <!-- FEATURES -->
-    <section class="features">
+    <section class="features" id="features">
       <div class="features-grid">
 
         <article class="feature-card">
-          <div class="icon">📷</div>
+          <div class="icon">
+            <span class="material-symbols-outlined">nest_cam_wall_mount</span>
+          </div>
           <h3>Instalaciones profesionales<br>para uso continuo</h3>
           <p>
             Sistemas preparados para operar todos los días en entornos de alta exigencia
@@ -102,7 +96,9 @@
         </article>
 
         <article class="feature-card">
-          <div class="icon">⚙️</div>
+          <div class="icon">
+            <span class="material-symbols-outlined">settings</span>
+          </div>
           <h3>Implementación<br>técnica correcta desde el inicio</h3>
           <p>
             Planificación e instalación pensadas para asegurar estabilidad en el uso real
@@ -110,7 +106,9 @@
         </article>
 
         <article class="feature-card">
-          <div class="icon">🏢</div>
+          <div class="icon">
+            <span class="material-symbols-outlined">apartment</span>
+          </div>
           <h3>Infraestructura<br>pensada para grandes espacios</h3>
           <p>
             Soluciones adaptadas a industrias, parques industriales y espacios públicos
@@ -118,7 +116,6 @@
         </article>
 
         <article class="feature-card highlight">
-          <div class="icon">🏭</div>
           <h3>Sistema de videovigilancia urbana y corporativa probado en operación real</h3>
           <p>
             Más de 570 cámaras activas en proyectos urbanos y privados, actualmente en funcionamiento
@@ -126,7 +123,9 @@
         </article>
 
         <article class="feature-card">
-          <div class="icon">💡</div>
+          <div class="icon">
+            <span class="material-symbols-outlined">factory</span>
+          </div>
           <h3>Experiencia aplicable<br>a municipios e industrias</h3>
           <p>
             El mismo criterio técnico utilizado en proyectos públicos y corporativos
@@ -134,7 +133,9 @@
         </article>
 
         <article class="feature-card">
-          <div class="icon">🛠️</div>
+          <div class="icon">
+            <span class="material-symbols-outlined">emoji_objects</span>
+          </div>
           <h3>Soporte técnico<br>como parte del sistema</h3>
           <p>
             Respaldo técnico que acompaña el funcionamiento en el tiempo
@@ -223,7 +224,7 @@
             <textarea name="message" id="message" placeholder="Tu mensaje...*" class="contact-input-field" aria-label="message" required></textarea>
             <span class="error-message" id="message-error"></span>
           </div>
-          <button type="submit" class="btn btn--primary" id="submit-form-btn">Enviar mensaje</button>
+          <button type="submit" class="btn btn--primary btn--submit" id="submit-form-btn">Enviar mensaje</button>
         </form>
       </div>
       <div class="container">
@@ -266,7 +267,7 @@
             </ul>
           </div>
 
-          <div class="contact__info">
+          <div class="contact__info" id="openstreet-map">
             <div class="location-wrapper">
               <h3>Casa Central Roldán</h3>
               <p class="location-address">Pellegrini 799, Roldán, Santa Fe</p>

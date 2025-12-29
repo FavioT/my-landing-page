@@ -52,11 +52,15 @@
   font-size: 22px;
   color: #000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  .material-symbols-outlined {
+    font-size: 36px; // Ajusta este valor para cambiar el tamaño del icono
+  }
 }
 
 /* Card destacada */
 .feature-card.highlight {
-  background-color: #d4b115;
+  background: linear-gradient(134deg, #d4b115 0%, #a28812 100%);
   color: #ffffff;
 }
 

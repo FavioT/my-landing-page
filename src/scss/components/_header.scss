@@ -4,7 +4,7 @@
 @use "../abstracts" as *;
 
 .header {
-  background-color: $color-card;
+  background-color: $color-primary-dark;
   position: fixed;
   top: 0;
   left: 0;
@@ -94,7 +94,7 @@
 
   // Element: link
   &__link {
-    color: $color-text;
+    color: $color-bg;
     text-decoration: none;
     display: block;
     padding: 0.6rem;
@@ -128,7 +128,7 @@
     padding-inline: 0;
     display: grid;
     text-align: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     &-icon {
       width: 64px;
