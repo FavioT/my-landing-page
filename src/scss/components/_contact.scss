@@ -248,6 +248,7 @@ textarea.contact-input-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 
 .contact-list {
@@ -258,6 +259,8 @@ textarea.contact-input-field {
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 100%;
+  align-content: space-between;
 }
 
 .contact-item {

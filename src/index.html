@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Landing Example — Tu Producto</title>
-  <meta name="description" content="Landing page responsive de ejemplo para presentar un producto o servicio.">
+  <title>Chipped Security — Sistemas de vigilancia a escala</title>
+  <meta name="description" content="Instalaciones profesionales para industrias, grandes espacios y municipios." />
   
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -78,7 +78,8 @@
   <main>
     <!-- SUPERIOR BANNER -->
     <section class="hero">
-      <div class="hero__superior-image" style="background-image: url(/images/superior-banner-image.webp);"></div>
+      <img src="/images/superior-banner-image.webp" alt="Banner superior" class="hero__superior-image hero__superior-image--desktop">
+      <img src="/images/superior-banner-image-mobile.webp" alt="Banner superior" class="hero__superior-image hero__superior-image--mobile">
     </section>
 
     <!-- FEATURES -->
@@ -147,9 +148,11 @@
 
     <!-- VIDEO BANNER -->
     <section>
-      <video class="hero__central-video" autoplay muted loop playsinline>
+      <video class="hero__central-video hero__central-video--desktop" autoplay muted loop playsinline>
         <source src="/images/banner-video.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
+      </video>
+      <video class="hero__central-video hero__central-video--mobile" autoplay muted loop playsinline>
+        <source src="/images/banner-video-mobile.mp4" type="video/mp4">
       </video>
     </section>
 
@@ -292,7 +295,8 @@
   <footer class="footer">
     <!-- INFERIOR BANNER -->
     <section>
-      <div class="hero__superior-image" style="background-image: url(/images/inferior-banner-image.webp);"></div>
+      <img src="/images/inferior-banner-image.webp" alt="Banner inferior" class="hero__inferior-image hero__inferior-image--desktop">
+      <img src="/images/inferior-banner-image-mobile.webp" alt="Banner inferior" class="hero__inferior-image hero__inferior-image--mobile">
     </section>
 
     <div class="footer__bottom section--alt">

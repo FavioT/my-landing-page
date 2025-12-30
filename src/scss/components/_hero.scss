@@ -24,10 +24,51 @@
   }
 
   &__superior-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    aspect-ratio: 317 / 110;
+    width: 100%;
+    height: auto;
+    display: block;
+
+    // Desktop version
+    &--desktop {
+      display: none;
+
+      @include md {
+        display: block;
+      }
+    }
+
+    // Mobile version
+    &--mobile {
+      display: block;
+
+      @include md {
+        display: none;
+      }
+    }
+  }
+
+  &__inferior-image {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    // Desktop version
+    &--desktop {
+      display: none;
+
+      @include md {
+        display: block;
+      }
+    }
+
+    // Mobile version
+    &--mobile {
+      display: block;
+
+      @include md {
+        display: none;
+      }
+    }
   }
 
   &__central-image {
@@ -44,6 +85,24 @@
     height: auto;
     display: block;
     object-fit: cover;
+
+    // Desktop version
+    &--desktop {
+      display: none;
+
+      @include md {
+        display: block;
+      }
+    }
+
+    // Mobile version
+    &--mobile {
+      display: block;
+
+      @include md {
+        display: none;
+      }
+    }
   }
 
   // Element: title
