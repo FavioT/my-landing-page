@@ -4,7 +4,7 @@
 @use "../abstracts" as *;
 
 .header {
-  background-color: $color-primary-dark;
+  background-color: $color-bg;
   position: fixed;
   top: 0;
   left: 0;
@@ -94,7 +94,7 @@
 
   // Element: link
   &__link {
-    color: $color-bg;
+    color: $color-primary-dark;
     text-decoration: none;
     display: block;
     padding: 0.6rem;

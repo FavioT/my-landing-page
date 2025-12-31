@@ -6,7 +6,7 @@
 @use "../abstracts/mixins" as *;
 
 .brands {
-  background-color: $color-bg;
+  background-color: $color-primary-dark;
   padding-block: 3rem;
 
   &__carousel {
@@ -76,8 +76,8 @@
     height: 44px;
     border: none;
     border-radius: 50%;
-    background: $color-primary-dark;
-    color: $color-bg;
+    background: $color-bg;
+    color: $color-primary-dark;
     cursor: pointer;
     box-shadow: $shadow-sm;
     border: 1px solid $border-medium;
