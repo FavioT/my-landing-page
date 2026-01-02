@@ -7,7 +7,7 @@
 
 .pricing {
   background-color: #b32025;
-  padding: 100px 20px;
+  padding: 100px 0 20px;
   position: relative;
   overflow: hidden;
 
@@ -46,6 +46,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 
+    &--featured {
+      background: linear-gradient(145deg, #3a3a3a, #6b6b6b);
+    }
+
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
@@ -81,51 +85,53 @@
       font-size: 14px;
       margin-bottom: 10px;
     }
+
+    &-list {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-item {
+      font-size: 13px;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: #d43c41;
+      }
+    }
+  }
+
+  &__message {
+    font-size: 16px;
+    font-style: italic;
+    color: $color-bg;
+    padding-block: 2rem;
+    text-align: center;
+
+    &-list-item {
+      list-style: none;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 15px;
+    left: -40px;
+    transform: rotate(-45deg);
+    background-color: #c12a2f;
+    color: $color-bg;
+    font-size: 11px;
+    padding: 5px 50px;
+    text-align: center;
   }
 }
-
-.pricing__card-list {
-  text-align: left;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.pricing__card-item {
-  font-size: 13px;
-  margin-bottom: 8px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.pricing__card-item::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #d43c41;
-}
-
-/* ===== BADGE ===== */
-
-.pricing__badge {
-  position: absolute;
-  top: 15px;
-  left: -40px;
-  transform: rotate(-45deg);
-  background-color: #c12a2f;
-  color: #ffffff;
-  font-size: 11px;
-  padding: 5px 50px;
-  text-align: center;
-}
-
-/* ===== MODIFICADOR: DESTACADO ===== */
-
-.pricing__card--featured {
-  background: linear-gradient(145deg, #3a3a3a, #6b6b6b);
-}
-
-/* ===== RESPONSIVE ===== */
 
 @media (max-width: 1100px) {
   .pricing__grid {
