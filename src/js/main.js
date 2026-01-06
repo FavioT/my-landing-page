@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showFormStatus('Enviando mensaje...', 'loading');
             
             try {
-                const response = await fetch(contactForm.action, {
+                const response = await fetch(contactForm.querySelector('form').action, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
