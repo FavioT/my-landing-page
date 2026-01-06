@@ -842,6 +842,9 @@ body {
   .pricing__grid {
     grid-template-columns: 1fr;
   }
+  .pricing__card {
+    margin-inline: 2rem;
+  }
 }
 .testimonials__grid {
   display: grid;
