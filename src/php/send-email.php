@@ -35,18 +35,18 @@ use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
 // ============================================================================
-// CONFIGURACIÓN SMTP - ¡MODIFICAR CON TUS DATOS!
+// CONFIGURACIÓN SMTP
 // ============================================================================
 $config = [
-    'smtp_host'     => 'smtp.tuservidor.com',    // Servidor SMTP (ej: smtp.gmail.com)
-    'smtp_port'     => 587,                       // Puerto (587 para TLS, 465 para SSL)
-    'smtp_secure'   => 'tls',                     // 'tls' o 'ssl'
-    'smtp_user'     => 'tu-email@tudominio.com',  // Tu email/usuario SMTP
-    'smtp_pass'     => 'tu-contraseña',           // Tu contraseña o App Password
-    'from_email'    => 'tu-email@tudominio.com',  // Email remitente
-    'from_name'     => 'Landing Page',            // Nombre remitente
-    'to_email'      => 'destino@tudominio.com',   // Email donde recibirás los mensajes
-    'to_name'       => 'Administrador',           // Nombre destinatario
+    'smtp_host'     => 'vps-5144227-x.dattaweb.com',
+    'smtp_port'     => 465,
+    'smtp_secure'   => 'ssl',
+    'smtp_user'     => 'web@chippedsecurity.com.ar',
+    'smtp_pass'     => 'H*Sprtx4yW',
+    'from_email'    => 'no-reply@chippedsecurity.com.ar',
+    'from_name'     => 'Formulario de contacto',
+    'to_email'      => 'danijdr.08@gmail.com',
+    'to_name'       => 'Administrador',
 ];
 
 // ============================================================================
@@ -59,12 +59,16 @@ $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
 if (strpos($contentType, 'application/json') !== false) {
     $input = json_decode(file_get_contents('php://input'), true);
     $name = trim($input['name'] ?? '');
-    $email = trim($input['email'] ?? '');
+    $email = trim($input['email_address'] ?? '');
     $message = trim($input['message'] ?? '');
+    $phone = trim($input['phone'] ?? '');
+    $subject = trim($input['subject'] ?? '');
 } else {
     $name = trim($_POST['name'] ?? '');
-    $email = trim($_POST['email'] ?? '');
+    $email = trim($_POST['email_address'] ?? '');
     $message = trim($_POST['message'] ?? '');
+    $phone = trim($input['phone'] ?? '');
+    $subject = trim($input['subject'] ?? '');
 }
 
 // Validaciones básicas
@@ -94,6 +98,8 @@ if (!empty($errors)) {
 $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
 $email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
 $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
+$phone = htmlspecialchars($phone, ENT_QUOTES, 'UTF-8');
+$subject = htmlspecialchars($subject, ENT_QUOTES, 'UTF-8');
 
 // ============================================================================
 // ENVIAR EMAIL CON PHPMAILER
@@ -151,6 +157,14 @@ try {
                     <div class='value'><a href='mailto:$email'>$email</a></div>
                 </div>
                 <div class='field'>
+                    <div class='label'>📞 Teléfono:</div>
+                    <div class='value'>$phone</div>
+                </div>
+                <div class='field'>
+                    <div class='label'>📋 Asunto:</div>
+                    <div class='value'>$subject</div>
+                </div>
+                <div class='field'>
                     <div class='label'>💬 Mensaje:</div>
                     <div class='value'>" . nl2br($message) . "</div>
                 </div>
@@ -166,6 +180,8 @@ try {
     $mail->AltBody = "Nuevo mensaje de contacto\n\n"
                    . "Nombre: $name\n"
                    . "Email: $email\n"
+                   . "Teléfono: $phone\n"
+                   . "Asunto: $subject\n"
                    . "Mensaje:\n$message";
 
     $mail->send();
