@@ -32,7 +32,7 @@
       <nav class="nav" id="main-nav" aria-label="Navegación principal">
         <ul class="nav__list">
           <li><a class="nav__link" href="#features">Nosotros</a></li>
-          <li><a class="nav__link" href="#contact-form">Contacto</a></li>
+          <li><a class="nav__link" href="#contact-section">Contacto</a></li>
           <li><a class="nav__link" href="#openstreet-map">Localización</a></li>
         </ul>
       </nav>
@@ -57,7 +57,7 @@
         </a>
       </li>
       <li>
-        <a class="nav-link" aria-current="false" href="#contact-form">
+        <a class="nav-link" aria-current="false" href="#contact-section">
           <span class="mobile-nav__list-icon">
             <span class="material-symbols-outlined" aria-hidden="true">person</span>
           </span>
@@ -157,7 +157,7 @@
     </section>
 
     <!-- BRANDS CAROUSEL -->
-    <section class="section brands">
+    <!-- <section class="section brands">
       <div class="container">
         <h2 class="section__title--central">Clientes principales/proveedores</h2>
 
@@ -196,13 +196,14 @@
           </button>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- CONTACT FORM / OPEN STREET MAP -->
-    <section id="contact-form" class="section--alt">
+    <section id="contact-section" class="section--alt">
       <div class="container">
         <h2 class="section__title--central section__title--alt" >Contáctanos</h2>
         <form class="contact-form" action="php/send-email.php" method="post" id="contact-form">
+          <p id="form-status" class="contact-section-text"></p>
           <div class="input-wrapper">
             <div class="input-group">
               <input type="text" name="name" id="name" placeholder="Tu nombre*" class="contact-input-field" aria-label="name" required>
@@ -241,7 +242,7 @@
                   </div>
                   <div class="card-content">
                     <h3 class="card-title">Escríbenos</h3>
-                    <a class="contact-card-link" href="mailto:contacto@ejemplo.com" target="_blank">contacto@ejemplo.com</a>
+                    <a class="contact-card-link" href="mailto:security@chipped.com.ar" target="_blank">security@chipped.com.ar</a>
                   </div>
                 </div>
               </li>

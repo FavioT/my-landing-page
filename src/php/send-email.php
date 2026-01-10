@@ -45,7 +45,7 @@ $config = [
     'smtp_pass'     => 'H*Sprtx4yW',
     'from_email'    => 'no-reply@chippedsecurity.com.ar',
     'from_name'     => 'Formulario de contacto',
-    'to_email'      => 'danijdr.08@gmail.com',
+    'to_email'      => 'security@chipped.com.ar',
     'to_name'       => 'Administrador',
 ];
 

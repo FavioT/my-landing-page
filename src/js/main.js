@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showFormStatus('Enviando mensaje...', 'loading');
             
             try {
-                const response = await fetch(contactForm.querySelector('form').action, {
+                const response = await fetch(contactForm.action, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -78,10 +78,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     body: JSON.stringify(formData)
                 });
                 
-                const result = await response.json();
+                const text = await response.text();
+                let result;
                 
-                if (response.ok && result.success !== false) {
-                    showFormStatus('¡Mensaje enviado correctamente! Nos pondremos en contacto pronto.', 'success');
+                try {
+                    result = text ? JSON.parse(text) : {};
+                } catch (parseError) {
+                    throw new Error('Respuesta inválida del servidor');
+                }
+                
+                if (response.ok && result.success) {
+                    showFormStatus(result.message || 'Mensaje enviado correctamente', 'success');
                     contactForm.reset();
                 } else {
                     showFormStatus(result.message || 'Error al enviar el mensaje.', 'error');
